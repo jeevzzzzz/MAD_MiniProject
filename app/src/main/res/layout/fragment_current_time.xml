@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.CurrentTimeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <AnalogClock
+        android:id="@+id/analogClock"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <TextClock
+            android:id="@+id/digitalClock"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:format24Hour="HH:mm:ss"
+            android:gravity="center_horizontal"
+            android:text="00:00:00"
+            android:textSize="60dp"
+            android:timeZone="GMT+05:30" />
+
+
+    </LinearLayout>
+
+    <TextClock
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format12Hour="EEEE, dd MMM, yyyy"
+        android:gravity="center_horizontal"
+        android:text="26 Jun, 2023"
+        android:textSize="20dp" />
+
+
+</LinearLayout>

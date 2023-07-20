@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1B8B9"
+    tools:context=".ui.huan.CountdownActivity">
+
+    <FrameLayout
+
+        android:id="@+id/main_remaining"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toTopOf="@id/button_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/CircularProgressBarStyle"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="80"
+            android:scaleX="1.45"
+            android:scaleY="1.45" />
+
+
+        <TextView
+            android:id="@+id/timeRemainingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00:00:00"
+            android:textSize="35dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="50sp"
+
+                android:src="@drawable/icon_bell_1" />
+
+            <TextView
+                android:id="@+id/finishTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50sp"
+                android:text="ABC"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_exit"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_continue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_remaining" />
+
+    <Button
+        android:id="@+id/button_continue"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_stop"
+        android:text="Stop"
+        android:textColor="#0E0D0D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_exit"
+        app:layout_constraintTop_toBottomOf="@id/main_remaining" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

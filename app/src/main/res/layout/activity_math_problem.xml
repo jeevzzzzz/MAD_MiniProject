@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.MathProblemActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/coconutz"
+        android:text="Solve Math"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_secondNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/coconutz"
+
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_firstNum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_firstNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+
+        android:layout_marginEnd="186dp"
+        android:fontFamily="@font/coconutz"
+        android:text="10"
+        android:textColor="@color/white"
+
+        android:textSize="32dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_firstOp"
+        app:layout_constraintEnd_toStartOf="@+id/edt_res"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_firstOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/coconutz"
+
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_firstNum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_secondOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/coconutz"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="32dp"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_firstOp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_res"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="27dp"
+        android:ems="10"
+        android:hint="Result"
+        android:fontFamily="@font/coconutz"
+        android:inputType="numberPassword"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:maxLength="4"
+        android:background="@drawable/edittext_bottom_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_firstNum"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
